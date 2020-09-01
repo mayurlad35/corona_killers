@@ -29,6 +29,7 @@ CREATE TABLE `address` (
   `address_line1` varchar(250) NOT NULL,
   `address_line2` varchar(250) DEFAULT NULL,
   `postcode` varchar(6) NOT NULL,
+  `email` varchar(150) NOT NULL,
   `contact_number` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`address_id`),
   UNIQUE KEY `address_id` (`address_id`)
@@ -41,7 +42,7 @@ CREATE TABLE `address` (
 
 LOCK TABLES `address` WRITE;
 /*!40000 ALTER TABLE `address` DISABLE KEYS */;
-INSERT INTO `address` VALUES (1,'test','1','test address ','1','1','123456789'),(2,'test','2','test address','2','2','1234567890'),(3,'test','3','test address','3','3','2345678901');
+INSERT INTO `address` VALUES (1,'test','1','test address ','1','1','test1@gmail.com','123456789'),(2,'test','2','test address','2','2','test2@gmail.com','1234567890'),(3,'test','3','test address','3','3','test2@gmail.com','2345678901');
 /*!40000 ALTER TABLE `address` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -54,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-09-01  9:33:19
+-- Dump completed on 2020-09-01 10:35:28
