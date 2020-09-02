@@ -52,10 +52,6 @@ public class DeliveryPageController {
         modelAndView.setViewName("addressform");
         return modelAndView;
     }
-
-    @RequestMapping(value = "/getAddresses", method = RequestMethod.GET)
-    public void getAllAddressDetails(ModelAndView modelAndView){
-
-    }
+    
 
 }
