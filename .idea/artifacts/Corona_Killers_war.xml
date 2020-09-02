@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Corona_Killers:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>Corona_Killers</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="SpringMvcJDBC.war">
+      <element id="artifact" artifact-name="Corona_Killers:war exploded" />
+    </root>
+  </artifact>
+</component>
