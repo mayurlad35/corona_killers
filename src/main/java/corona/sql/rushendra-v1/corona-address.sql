@@ -1,4 +1,5 @@
 
+DROP TABLE IF EXISTS `address`;
 CREATE TABLE `address` (
   `address_id` int NOT NULL AUTO_INCREMENT,
   `first_name` varchar(45) NOT NULL,
@@ -11,6 +12,12 @@ CREATE TABLE `address` (
   PRIMARY KEY (`address_id`),
   UNIQUE KEY `address_id` (`address_id`)
 );
+
+--
+-- Dumping data for table `address`
+--
+
+LOCK TABLES `address` WRITE;
 INSERT INTO `address` VALUES (1,'test','1','test address ','1','1','test1@gmail.com','123456789'),(2,'test','2','test address','2','2','test2@gmail.com','1234567890'),(3,'test','3','test address','3','3','test2@gmail.com','2345678901');
 
 UNLOCK TABLES;
