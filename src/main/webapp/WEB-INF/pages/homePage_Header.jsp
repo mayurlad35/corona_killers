@@ -5,7 +5,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
-
     <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
     <title>
@@ -51,11 +50,7 @@
 </head>
 <body>
 <span id="img_H"> <img  src="<c:url value="/resources/logo.PNG"/>" id="img1"/></span>
-
     <span id="c">Corona Fighters</span>
-
-
-
     <div class="ui eight item  menu left_menu">
         <a class=" item">
             <i class="home icon"></i>
@@ -93,7 +88,6 @@
                 </a>
             </c:otherwise>
         </c:choose>
-
     </div>
 </div>
 </body>
