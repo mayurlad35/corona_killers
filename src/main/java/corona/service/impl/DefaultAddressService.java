@@ -18,8 +18,9 @@ public class DefaultAddressService implements AddressService {
 
 
     @Override
-    public int processAddressDetails(final AddressModel addressModel) {
-        return addressDao.saveAddress(addressModel);
+    public String processAddressDetails(final AddressModel addressModel) {
+
+        return addressDao.saveAddress(addressModel) > 0 ? "registration successfull" : "unable to register";
 
     }
 

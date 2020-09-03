@@ -34,24 +34,16 @@ public class DeliveryPageController {
 
 
     @RequestMapping(value = "/addDeliveryAddress",method = RequestMethod.POST)
-    public ModelAndView addDeliveryAddress(@ModelAttribute("address") final  AddressModel addressModel, final BindingResult bindingResult, ModelAndView modelAndView){
+    public String addDeliveryAddress(@ModelAttribute("address") final  AddressModel addressModel, final BindingResult bindingResult, Model model){
         System.out.println(addressModel.getEmail());
         addressValidator.validate(addressModel,bindingResult);
         if(bindingResult.hasErrors()){
-            modelAndView.addObject("address",addressModel);
-            modelAndView.setViewName("addressform");
-            return modelAndView;
+            model.addAttribute("address",addressModel);
         }
-        final int count =addressService.processAddressDetails(addressModel);
-        if( count!=0) {
-            modelAndView.addObject("msg","registered successfully");
-        }
-        else {
-            modelAndView.addObject("msg","unable to register");
-        }
-        modelAndView.setViewName("addressform");
-        return modelAndView;
+        model.addAttribute("msg",addressService.processAddressDetails(addressModel));
+        model.addAttribute("address",new AddressModel());
+        return "addressform";
     }
-    
+
 
 }

@@ -47,7 +47,7 @@
 </table>
 <input type="submit" value="Add Address"/>
 </form:form>
-${msg}
+<h3 style="color:blue;">${msg}</h3>
 </div>
 
 </body>
