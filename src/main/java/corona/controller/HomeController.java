@@ -14,4 +14,8 @@ public class HomeController {
         model.addAttribute("message1", "welcome to homepage");
         return "homepage";
     }
+    @RequestMapping("/header")
+    public String homePage_Header(){
+        return "homePage_Header";
+    }
 }
