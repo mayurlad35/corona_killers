@@ -15,12 +15,16 @@ USE `corona`;
 DROP TABLE IF EXISTS `coronadailystatus`;
 
 CREATE TABLE `coronadailystatus` (
-  `date` date NOT NULL,
+  `date` varchar(30) NOT NULL,
   `activeCases` int(11) NOT NULL,
-  `totalRecoverd` int(11) NOT NULL,
+  `totalRecovered` int(11) NOT NULL,
   `totalDeaths` int(11) NOT NULL,
   `newCases` int(11) NOT NULL,
   `totalCases` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `coronadailystatus` */
+
+insert into `coronadailystatus` values 
+('03/09/2020',10,5,1,4,16),
+('02/09/2020',22,10,4,9,36);
