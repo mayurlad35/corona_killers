@@ -7,13 +7,12 @@
     <title>Sign Up</title>
 
     <style>
-
         .error {
             color: red;
         }
 table{
-    height:460px;
-    width:445px;
+    height:450px;
+    width:440px;
     border-collapse: collapse;
     border-radius: 15px;
 }
@@ -21,10 +20,10 @@ table{
         {
             height:40px;
             width: 380px;
-            background-color:white ;
+            background-color: whitesmoke;
             border-color:#0000;
             align:center;
-            margin-left: 20px;
+            margin-left:30px;
             margin-top: 8px;
 
 }
@@ -33,14 +32,14 @@ table{
             height:40px;
             width: 175px;
             margin-left: 30px;
-            background-color:white ;
+            background-color:whitesmoke ;
             border-color:#0000;
         }
         #l
         {
             height:40px;
             width: 175px;
-            background-color:white ;
+            background-color:whitesmoke;
             border-color:#0000;
             margin-left:-5px;
         }
@@ -115,10 +114,15 @@ table{
         }
     </style>
 </head>
-<!--------------------add here your header page-------------------------------->
+
 
 <body bgcolor="#3498DB">
+<!----------------------add here your header page--------------------------------->
+
 <center>
+    <br>
+    <br>
+    <br>
     <br>
     <br>
     <br>
@@ -126,7 +130,7 @@ table{
     <br>
     <c:url var="loginUrl" value="/saveCustomer"/>
     <form:form modelAttribute="custom" action="${loginUrl}" method="post">
-    <table bgcolor="#E8EBEE">
+    <table bgcolor="#D1D9DC">
 
         <tr>
             <td id="s">

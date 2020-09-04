@@ -1,5 +1,5 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java"  isELIgnored="false" %>
 <html>
 <head>
     <title>Sign In</title>
@@ -64,13 +64,15 @@
 
 <body bgcolor="#3366ff">
 <!--------------------add here your header page-------------------------------->
-<br>
-<br>
-<br>
-<br>
-<br>
 
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <c:if test="${not empty msg}">
     <font color="red">${msg} </font></c:if>
 <form name='loginForm'  action="${pageContext.request.contextPath}/j_spring_security_check" method='POST'>
