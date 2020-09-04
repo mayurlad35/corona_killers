@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
@@ -23,3 +24,7 @@
 
 </body>
 </html>
+=======
+<h1>${message}</h1>
+<h1>${message1}</h1>
+>>>>>>> e6aab29f61a1d361234d28c813bb851c3612a4fd
