@@ -13,9 +13,4 @@ public class HomeController {
         model.addAttribute("message", "welcome to corona fighter's club");
         return "homepage";
     }
-    @RequestMapping("/header")
-    public String homePage_Header(){
-        return "homePage_Header";
-    }
-    
 }
