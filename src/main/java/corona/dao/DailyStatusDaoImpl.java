@@ -2,6 +2,7 @@ package corona.dao;
 
 import corona.model.DailyStatusModel;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 
@@ -17,14 +18,14 @@ public class DailyStatusDaoImpl implements DailyStatusDao {
     public int addDailyStatusData(DailyStatusModel statusModel) {
         int totalCases = statusModel.getActiveCases()+statusModel.getTotalRecovered()+statusModel.getTotalDeaths();
         System.out.println(totalCases);
-        String query = "insert into coronadailystatus(date,activeCases,totalRecovered,totalDeaths,newCases,totalCases)values('"+statusModel.getDate()+"','"+statusModel.getActiveCases()+"'" +
+        String query = "insert into corona.coronadailystatus(date,activeCases,totalRecovered,totalDeaths,newCases,totalCases)values('"+statusModel.getDate()+"','"+statusModel.getActiveCases()+"'" +
                 ",'"+statusModel.getTotalRecovered()+"','"+statusModel.getTotalDeaths()+"','"+statusModel.getNewCases()+"','"+totalCases+"')";
         return template.update(query);
     }
 
     @Override
     public List<DailyStatusModel> getDailyStatusData() {
-        List<DailyStatusModel> list = template.query("SELECT * FROM coronadailystatus", new RowMapper<DailyStatusModel>() {
+        List<DailyStatusModel> list = template.query("SELECT * FROM corona.coronadailystatus", new RowMapper<DailyStatusModel>() {
             @Override
             public DailyStatusModel mapRow(ResultSet resultSet, int i) throws SQLException {
                 DailyStatusModel statusModel = new DailyStatusModel();
@@ -40,4 +41,13 @@ public class DailyStatusDaoImpl implements DailyStatusDao {
         return list;
     }
 
+    @Override
+    public DailyStatusModel getClosestDate() {
+        String query = "SELECT Max(date) FROM coronadailystatus where date<(select Max(date) from coronadailystatus)";
+        String closestDate = template.queryForObject(query,String.class);
+        System.out.println(closestDate);
+        DailyStatusModel statusModel = (DailyStatusModel) template.queryForObject("SELECT * FROM coronadailystatus where date=(SELECT Max(date) FROM coronadailystatus where date<(select Max(date) from coronadailystatus))", new BeanPropertyRowMapper(DailyStatusModel.class));
+        System.out.println(statusModel);
+        return statusModel;
+    }
 }

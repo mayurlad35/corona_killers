@@ -26,4 +26,9 @@ public class DailyStatusServiceImpl implements DailyStatusService {
 
         return statusDao.getDailyStatusData();
     }
+
+    @Override
+    public DailyStatusModel getClosestDate() {
+        return statusDao.getClosestDate();
+    }
 }

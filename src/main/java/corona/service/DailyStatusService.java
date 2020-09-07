@@ -7,4 +7,5 @@ import java.util.List;
 public interface DailyStatusService {
     public String addingCoronaDailyStatus(DailyStatusModel statusModel);
     public List<DailyStatusModel> getDailyStatusData();
+    public DailyStatusModel getClosestDate();
 }

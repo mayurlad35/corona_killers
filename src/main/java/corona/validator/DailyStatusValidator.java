@@ -13,7 +13,6 @@ public class DailyStatusValidator implements Validator {
 
     @Override
     public void validate(Object o, Errors errors) {
-        ValidationUtils.rejectIfEmpty(errors, "date", "dailyStatusModel.date.empty");
         ValidationUtils.rejectIfEmpty(errors, "activeCases", "dailyStatusModel.activeCases.empty");
         ValidationUtils.rejectIfEmpty(errors, "totalRecovered", "dailyStatusModel.totalRecovered.empty");
         ValidationUtils.rejectIfEmpty(errors, "totalDeaths", "dailyStatusModel.totalDeaths.empty");

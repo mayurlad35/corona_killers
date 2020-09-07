@@ -42,14 +42,12 @@
 
 <c:url value="/saveStatus" var="formUrl"/>
 <form:form modelAttribute="status" action="${formUrl}" method="post">
-    <a href="index.jsp">Home</a>
     <h2 class="reg">Corona Daily Status Update Here !!!</h2>
     <table align="center">
 
         <tr>
             <td>Date:</td>
-            <td><form:input path="date" placeholder="Enter date"/></td>
-            <td><form:errors path="date" cssClass="error" /></td>
+            <td><form:input type="date" path="date"/></td>
         </tr>
         <tr>
             <td>Active Cases:</td>

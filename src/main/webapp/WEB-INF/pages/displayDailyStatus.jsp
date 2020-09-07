@@ -8,6 +8,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
+<style>
+    body{
+        background-color: aliceblue;
+    }
+</style>
 <head>
     <title>Title</title>
 </head>
@@ -32,6 +37,26 @@
             <td>${status.totalCases}</td>
         </tr>
     </c:forEach>
+</table>
+<br><br><br>
+<h2 align="center">Closest current date Entry Details </h2>
+<table align="center" cellspacing="0" style="border: brown" border="5" border="2" width="70%" cellpadding="2">
+    <tr>
+        <th>Date</th>
+        <th>Active Cases</th>
+        <th>Total Recovered</th>
+        <th>Total Deaths</th>
+        <th>New Cases</th>
+        <th>Total Cases</th>
+    </tr>
+        <tr>
+            <td>${closestData.date}</td>
+            <td>${closestData.activeCases}</td>
+            <td>${closestData.totalRecovered}</td>
+            <td>${closestData.totalDeaths}</td>
+            <td>${closestData.newCases}</td>
+            <td>${closestData.totalCases}</td>
+        </tr>
 </table>
 </body>
 </html>

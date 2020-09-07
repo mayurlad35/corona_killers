@@ -4,6 +4,7 @@ import corona.model.DailyStatusModel;
 import corona.service.DailyStatusService;
 import corona.validator.DailyStatusValidator;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.converter.json.GsonBuilderUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import java.util.Date;
 import java.util.List;
 
 @Controller
@@ -50,7 +52,10 @@ public class DailyStatusController {
     @RequestMapping(value = "/getDailyStatusData")
     public String showDailyStatus(Model model){
         List<DailyStatusModel> statusData = statusService.getDailyStatusData();
+        DailyStatusModel closestDateRecord = statusService.getClosestDate();
         model.addAttribute("dailyStatus",statusData);
+        model.addAttribute("closestData",closestDateRecord);
         return "displayDailyStatus";
     }
+
 }

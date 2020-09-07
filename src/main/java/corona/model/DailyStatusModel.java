@@ -1,5 +1,4 @@
 package corona.model;
-
 public class DailyStatusModel {
     private String date;
     private int activeCases;
