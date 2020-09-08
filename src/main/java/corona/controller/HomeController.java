@@ -29,6 +29,7 @@ public class HomeController {
 
 
 
+
     @RequestMapping(value = "/checkSessionId", produces = MediaType.TEXT_PLAIN_VALUE)
     @ResponseBody
     public String handler(HttpSession httpSession) {
@@ -40,5 +41,12 @@ public class HomeController {
         }
         return "first access time : " + time+"\nsession id: "+httpSession.getId();
     }
+
+
+    @RequestMapping("/header")
+    public String homePage_Header(){
+        return "homePage_Header";
+    }
+    
 
 }
