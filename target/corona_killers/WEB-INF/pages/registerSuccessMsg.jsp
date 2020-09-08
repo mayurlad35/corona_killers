@@ -14,7 +14,12 @@
     <title>Register Success Msg</title>
 </head>
 <body>
-<!--------------------add here your header page-------------------------------->
+<!---------------------add here your header page--------------------------------->
+
+<br>
+<br>
+<br>
+<br>
 <br>
 <br>
 <br>
@@ -23,7 +28,6 @@
 <br>
 <br>
 <br>
-
 <h3><a href="${pageContext.request.contextPath}/login">Login here!!!!</a></h3>
 </body>
 </html>

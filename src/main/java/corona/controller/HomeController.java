@@ -28,7 +28,7 @@ public class HomeController {
     }
 
 
-    
+
     @RequestMapping(value = "/checkSessionId", produces = MediaType.TEXT_PLAIN_VALUE)
     @ResponseBody
     public String handler(HttpSession httpSession) {
