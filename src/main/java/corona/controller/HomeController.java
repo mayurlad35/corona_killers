@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpSession;
+import java.security.Principal;
 import java.time.LocalDateTime;
 
 @Controller
@@ -27,25 +28,12 @@ public class HomeController {
         return "homepage";
     }
 
+    @RequestMapping("/getSessionValue")
+    public String session(HttpSession httpSession , Principal principal){
 
-
-
-    @RequestMapping(value = "/checkSessionId", produces = MediaType.TEXT_PLAIN_VALUE)
-    @ResponseBody
-    public String handler(HttpSession httpSession) {
-        String sessionKey = "firstAccessTime";
-        Object time = httpSession.getAttribute(sessionKey);
-        if (time == null) {
-            time = LocalDateTime.now();
-            httpSession.setAttribute(sessionKey, time);
-        }
-        return "first access time : " + time+"\nsession id: "+httpSession.getId();
-    }
-
-
-    @RequestMapping("/header")
-    public String homePage_Header(){
-        return "homePage_Header";
+           String str=principal.getName();
+        httpSession.setAttribute("session", str);
+        return "session";
     }
     
 

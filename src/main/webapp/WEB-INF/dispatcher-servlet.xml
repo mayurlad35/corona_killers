@@ -28,11 +28,4 @@
     <bean id="customerValidator " class="corona.validator.CustomerValidator"/>
     <bean id="customerDao" class="corona.dao.CustomerDaoImpl"/>
 
-    <mvc:resources mapping="/resources/**" location="/resources/" />
-    <mvc:annotation-driven />
-
-    <mvc:resources mapping="/resources/**" location="/resources/" />
-    <mvc:annotation-driven />
-
-
 </beans>
