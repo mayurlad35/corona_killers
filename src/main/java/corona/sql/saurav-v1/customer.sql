@@ -29,7 +29,7 @@ CREATE TABLE `customer` (
   `password` varchar(20) DEFAULT NULL,
   `re_password` varchar(20) DEFAULT NULL,
   `age` varchar(11) DEFAULT NULL,
-  `contact` varchar(11) DEFAULT NULL,
+  `contact` varchar(12) DEFAULT NULL,
   `role` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
