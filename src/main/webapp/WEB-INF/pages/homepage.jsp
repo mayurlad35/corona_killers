@@ -11,7 +11,7 @@
 </style>
 <body>
 <br><br><br><br><br>
-<img  src="<c:url value="/resources/corona.jpg"/>" class="center"/>
+<img  src="<c:url value="/images/corona.jpg"/>" class="center"/>
 <p align="center">
     Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus.
 </p>
