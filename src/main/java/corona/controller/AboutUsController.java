@@ -15,7 +15,7 @@ public class AboutUsController {
 
     @RequestMapping(value = "/aboutus",method = RequestMethod.GET)
     public String aboutUs() {
-        logger.info("About Us page Execuited");
+        logger.info("About_Us page Execuited");
         return "aboutUs";
     }
 }
