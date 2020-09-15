@@ -6,12 +6,12 @@
         display: block;
         margin-left: auto;
         margin-right: auto;
-        width: 51%;
+        width: 50%;
     }
 </style>
 <body>
 <br><br><br><br><br>
-<img  src="<c:url value="/images/corona.jpg"/>" class="center"/>
+<img src="<c:url value="/images/coronaa.jpg"/>" class="center"/>
 <p align="center">
     Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus.
 </p>
