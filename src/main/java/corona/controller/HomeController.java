@@ -15,7 +15,6 @@ public class HomeController {
         model.addAttribute("message1", "welcome to homepage");
         return "homepage";
     }
-
     @RequestMapping(value = "/homepage",method = RequestMethod.GET)
     public String homePage()
     {
