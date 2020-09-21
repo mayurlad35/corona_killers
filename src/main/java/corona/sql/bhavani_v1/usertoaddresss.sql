@@ -31,7 +31,7 @@ CREATE TABLE `customer` (
   `password` varchar(20) DEFAULT NULL,
   `re_password` varchar(20) DEFAULT NULL,
   `age` int(11) DEFAULT NULL,
-  `contact` int(11) DEFAULT NULL,
+  `contact` varchar(12) DEFAULT NULL,
   `role` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -43,6 +43,7 @@ CREATE TABLE `customer` (
 
 LOCK TABLES `customer` WRITE;
 /*!40000 ALTER TABLE `customer` DISABLE KEYS */;
+INSERT INTO `customer` VALUES ('bhavani1','chinni1','chinni@gmail.com','0520','0520',16,'7958256564','ROLE_U'),('raghu','roopa','roopa@gmail.com','1820','1820',18,'9502144525','ROLE_U'),('saurav','kumar','sauravraj751@gmail.com','1000','1000',12,'8789785295','ROLE_Customer'),('bhavani1','chinni1','vallamnrgb@gmail.com','0520','0520',15,'8008098995','ROLE_U');
 /*!40000 ALTER TABLE `customer` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -64,7 +65,7 @@ CREATE TABLE `address` (
   `contact_number` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`address_id`),
   UNIQUE KEY `address_id` (`address_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -73,7 +74,7 @@ CREATE TABLE `address` (
 
 LOCK TABLES `address` WRITE;
 /*!40000 ALTER TABLE `address` DISABLE KEYS */;
-INSERT INTO `address` VALUES (1,'test','1','test address ','1','1','test1@gmail.com','123456789'),(2,'test','2','test address','2','2','test2@gmail.com','1234567890'),(3,'test','3','test address','3','3','test2@gmail.com','2345678901');
+INSERT INTO `address` VALUES (1,'test','1','test address ','1','1','test1@gmail.com','123456789'),(2,'test','2','test address','2','2','test2@gmail.com','1234567890'),(3,'test','3','test address','3','3','test2@gmail.com','2345678901'),(4,'bhga','bdksed','qkdk','mfed','66','jhdfuw','698989659'),(5,'bhga','bdksed','qkdk','mfed','66','jhdfuw','698989659'),(6,'feknv','odjfoe','foekf','kkfoe','89','fmorjf','56556565'),(7,'feknv','odjfoe','foekf','kkfoe','89','fmorjf','56556565'),(8,'hfuh','djeid','jodjeo','jojoew','517425','utr','1245465'),(9,'hfuh','djeid','jodjeo','jojoew','517425','utr','1245465'),(10,'msfj','mdoe','koree','ekri0','78','eiieru','95989898'),(11,'msfj','mdoe','koree','ekri0','78','eiieru','95989898'),(12,'msfj','mdoe','koree','ekri0','78','eiieru','95989898'),(13,'msfj','mdoe','koree','ekri0','78','eiieru','95989898'),(14,'wef','ere','egrd','erge','25','dver','56595'),(15,'wef','ere','egrd','erge','25','dver','56595'),(16,'raghu','ram','kdr','mtp','57887','ram@gmail.com','598799'),(17,'raghu','ram','kdr','mtp','57887','ram@gmail.com','598799'),(18,'wkmfwr','ekoge','kfpekf','rpkp4','69','fkeofk3','632652'),(19,'wkmfwr','ekoge','kfpekf','rpkp4','69','fkeofk3','632652'),(20,'dad','mom','kdr','mtp','8','dad@gmail.com','8142883239'),(21,'dad','mom','kdr','mtp','8','dad@gmail.com','8142883239'),(22,'roopa','chinni','kdp','ctr','4564','kundella@gmail.com','5846416488'),(23,'roopa','chinni','kdp','ctr','4564','kundella@gmail.com','5846416488');
 /*!40000 ALTER TABLE `address` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -100,6 +101,7 @@ CREATE TABLE `usertoaddress` (
 
 LOCK TABLES `usertoaddress` WRITE;
 /*!40000 ALTER TABLE `usertoaddress` DISABLE KEYS */;
+INSERT INTO `usertoaddress` VALUES ('sauravraj751@gmail.com',1),('chinni@gmail.com',2),('chinni@gmail.com',1),('chinni@gmail.com',21),('roopa@gmail.com',23);
 /*!40000 ALTER TABLE `usertoaddress` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -112,4 +114,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-09-01 22:35:21
+-- Dump completed on 2020-09-17 16:36:18

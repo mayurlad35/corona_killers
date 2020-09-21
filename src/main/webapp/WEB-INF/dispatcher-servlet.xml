@@ -36,6 +36,10 @@
         <property name="location" value="classpath:db.properties" />
     </bean>
 
+<bean id="existaddressdao" class="corona.dao.ExistingAdressDaoImpl"/>
+   <bean id="existaddressservice" class="corona.service.ExistingAdressServiceImpl">
+       <property name="existingAdressDao" ref="existaddressdao"/>
+   </bean>
 
 
     <bean id="irvr" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
